@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-center my-4">
-                <img src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_242235046_xl-2015-1-1024x582.jpg" alt="Popular Article 2" className="w-16 h-16 mr-4 rounded-lg" />
+                <img src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/jonathan-kemper-poSms2EzfNY-unsplash-1024x683.jpg" alt="Popular Article 2" className="w-16 h-16 mr-4 rounded-lg" />
                 <div>
                   <a href="#" className="block text-sm font-bold leading-tight">Samsung is Developing Bright MicroLED on Displays for AR Headsets</a>
                   <span className="text-gray-400 text-xs block">Jan 14, 2021</span>
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-center my-4">
-                <img src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash-1024x683.jpg" alt="Popular Article 3" className="w-16 h-16 mr-4 rounded-lg" />
+                <img src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/0247d91565b69ed9ddba4ec59ac97963-1-1024x585.jpg" alt="Popular Article 3" className="w-16 h-16 mr-4 rounded-lg" />
                 <div>
                   <a href="#" className="block text-sm font-bold leading-tight">Warner Bros. Games Announces Mortal Kombat: Onslaught</a>
                   <span className="text-gray-400 text-xs block">Jan 14, 2021</span>
