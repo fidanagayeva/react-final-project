@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../featured/Layout';
 import { MainCard, SubCard, ArticleCard } from '../components/Card';
 import Sponsored from '../components/Sponsored';
+import EditorCards from '../components/EditorCards'; 
 
 const Home = () => {
   const mainCard = {
@@ -99,7 +100,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <Sponsored /> 
+        <Sponsored />
+        <EditorCards /> 
       </div>
     </Layout>
   );
