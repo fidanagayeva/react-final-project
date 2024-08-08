@@ -1,23 +1,51 @@
 {
-    "articles": [
-      {
-        "id": 1,
-        "title": "Popular New Xbox Game Pass Game Being Review Bombed With '0s'",
-        "date": "Jan 14, 2021",
-        "views": 7792
-      },
-      {
-        "id": 2,
-        "title": "Samsung is Developing Bright MicroLED on Displays for AR Headsets",
-        "date": "Jan 14, 2021",
-        "views": 6914
-      },
-      {
-        "id": 3,
-        "title": "Warner Bros. Games Announces Mortal Kombat: Onslaught",
-        "date": "Jan 14, 2021",
-        "views": 4418
-      }
-    ]
-  }
-  
+  "mainCard": {
+    "id": 1,
+    "title": "Save $25 on Philips Wired Headphone For A Great Sounding Over-Ear Headphone",
+    "category": "Gadgets",
+    "date": "Jan 12, 2020",
+    "author": "Shane Doe",
+    "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_29247013_xl-2015-2-1024x683.jpg",
+    "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+  },
+  "subCards": [
+    {
+      "id": 2,
+      "title": "Tablet PC Market to Witness Exponential Growth by 2028, Sources Say",
+      "category": "Technology",
+      "date": "Jan 12, 2020",
+      "author": "Shane Doe",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/daniel-korpai-seLBnDRB6_M-unsplash-1-1-819x1024.jpg",
+      "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Microsoft Co-Founder Bill Gates Visits EU, Steers Clean Energy Talks",
+      "category": "Technology",
+      "date": "Jan 11, 2020",
+      "author": "Shane Doe",
+      "image": "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_245244020_xl-2015-2-1024x756.jpg",
+      "authorImage": "https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "Popular New Xbox Game Pass Game Being Review Bombed With '0s'",
+      "date": "Jan 14, 2021",
+      "views": 7792
+    },
+    {
+      "id": 2,
+      "title": "Samsung is Developing Bright MicroLED on Displays for AR Headsets",
+      "date": "Jan 14, 2021",
+      "views": 6914
+    },
+    {
+      "id": 3,
+      "title": "Warner Bros. Games Announces Mortal Kombat: Onslaught",
+      "date": "Jan 14, 2021",
+      "views": 4418
+    }
+  ]
+}
