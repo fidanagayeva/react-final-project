@@ -6,49 +6,24 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../styles/style.scss';
 
 const EditorCards = () => {
-  const defaultCards = [
-    {
-      id: 1,
-      title: "Study: Earbuds Use, Youngsters at High Risk of Hearing Loss",
-      category: "Gadgets",
-      date: "Mar 15, 2020",
-      author: "Shane Doe",
-      image: "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/akhil-yerabati-Q2uV5TkjNz8-unsplash-1024x579.jpg",
-    },
-    {
-      id: 2,
-      title: "Telescope is Revealing the Galaxies of the Universe Like Never Before",
-      category: "Technology",
-      date: "Mar 15, 2020",
-      author: "Shane Doe",
-      image: "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/greg-rakozy-oMpAz-DN-9I-unsplash-1024x683.jpg",
-    },
-    {
-      id: 3,
-      title: "CarPlay Concept Shows Off a Modular UI Inspired by Next-Gen Design",
-      category: "Phones",
-      date: "Mar 15, 2020",
-      author: "Shane Doe",
-      image: "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_429887216_XL-1-1024x658.jpg",
-    },
-    {
-      id: 4,
-      title: "Latest Windows 11 Preview Build Finally Lets You Search for Copied Text",
-      category: "Technology",
-      date: "Mar 15, 2020",
-      author: "Shane Doe",
-      image: "https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/sunrise-king-NK-cB-l1cv0-unsplash-1-1024x617.jpg",
-    },
-  ];
-
   const [cards, setCards] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null);
   const [modalType, setModalType] = useState('');
 
   useEffect(() => {
-    const savedCards = JSON.parse(localStorage.getItem('editorCards')) || [];
-    const mergedCards = mergeCards(savedCards, defaultCards);
-    setCards(mergedCards);
+    const fetchDefaultCards = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/editcards'); 
+        const data = await response.json();
+        const savedCards = JSON.parse(localStorage.getItem('editorCards')) || [];
+        const mergedCards = mergeCards(savedCards, data); 
+        setCards(mergedCards);
+      } catch (error) {
+        console.error('Error fetching default cards:', error);
+      }
+    };
+
+    fetchDefaultCards();
   }, []);
 
   useEffect(() => {
@@ -128,9 +103,9 @@ const EditorCards = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {cards.map((card, index) => (
-          <div key={card.id} className="bg-white rounded-lg shadow-md overflow-hidden relative">
-            <img src={card.image} alt={card.title} className="w-full h-40 object-cover" />
-            <div className="absolute top-2 left-2 bg-purple-600 text-white text-xs px-2 py-1 rounded">{card.category}</div>
+          <div key={card.id} className="rounded-lg overflow-hidden relative">
+            <img src={card.image} alt={card.title} className="w-full rounded-lg h-[11.5rem] object-cover" />
+            <div className="absolute bottom-[22.55rem] h-[1.7rem] left-0 bg-purple-600 text-white text-xs px-2 py-1 rounded">{card.category}</div>
             <div className="p-4 flex items-start">
               <div className="text-5xl text-gray-400 font-bold mr-4">{index + 1}</div>
               <div>

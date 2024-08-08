@@ -6,7 +6,7 @@ import '../styles/style.scss';
 const Header = ({ toggleSidebar, sidebar }) => {
   return (
     <header className="bg-white shadow-md">
-      <div className="bg-black text-white py-2 w-full fixed top-0 left-0 z-10">
+      <div className="bg-black text-white py-2 w-full fixed top-0 left-0 z-20">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex space-x-4">
             <Link to="/" className="hover:text-gray-400 transition duration-300">Start Here</Link>
@@ -32,7 +32,7 @@ const Header = ({ toggleSidebar, sidebar }) => {
           <Link to="/" className="font-bold">Home</Link>
           <div className="relative group">
             <Link to="/" className="hover:text-blue-500 transition duration-300 flex items-center font-bold">Features <FaChevronDown className="ml-1 text-blue-500 text-sm" /></Link>
-            <div className="absolute left-0 w-[13rem] bg-white shadow-md hidden group-hover:block">
+            <div className="absolute left-0 w-[13rem] bg-white shadow-md hidden group-hover:block z-30">
               <Link to="/" className="block px-4 py-2 hover:bg-gray-200 transition duration-300">50+ Unique Demos</Link>
               <Link to="/" className="block px-4 py-2 hover:bg-gray-200 transition duration-300">Post Styles</Link>
               <Link to="/" className="block px-4 py-2 hover:bg-gray-200 transition duration-300">Category Layouts</Link>
