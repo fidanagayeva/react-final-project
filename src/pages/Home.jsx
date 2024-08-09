@@ -1,9 +1,8 @@
 import React from 'react';
-import Layout from '../featured/Layout';
 import { MainCard, SubCard, ArticleCard } from '../components/Card';
 import Sponsored from '../components/Sponsored';
-import EditorCards from '../components/EditorCards'; 
-
+import EditorCards from '../components/EditorCards';
+import VideoCards from '../components/VideoCards'; 
 const Home = () => {
   const mainCard = {
     id: 1,
@@ -80,7 +79,6 @@ const Home = () => {
   ];
 
   return (
-    <Layout>
       <div className="container mx-auto p-4">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full lg:w-2/3 px-4 mb-4 relative">
@@ -102,8 +100,8 @@ const Home = () => {
         </div>
         <Sponsored />
         <EditorCards /> 
+        <VideoCards /> 
       </div>
-    </Layout>
   );
 };
 

@@ -1,18 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Gadgets from './pages/Gadgets';
-import './styles/style.scss';
+import { BrowserRouter as Router, Routes, Route, RouterProvider } from 'react-router-dom';
 
-function App() {
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { routes } from './router';
+
+const queryClient = new QueryClient();
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/gadgets" element={<Gadgets />} />
-      </Routes>
-    </Router>
+    <QueryClientProvider client={queryClient}>
+      
+       <RouterProvider router={routes}/>
+      
+    </QueryClientProvider>
   );
-}
+};
 
 export default App;

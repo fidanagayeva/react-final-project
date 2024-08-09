@@ -1,5 +1,3 @@
-// src/components/Card/Card.jsx
-
 import React from 'react';
 
 export const MainCard = ({ card }) => {

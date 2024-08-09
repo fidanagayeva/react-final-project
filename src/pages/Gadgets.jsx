@@ -3,9 +3,7 @@ import Layout from '../featured/Layout';
 
 const Gadgets = () => {
   return (
-    <Layout>
-      <h1>Gadgets Page Content</h1>
-    </Layout>
+   <h1>salam</h1>
   );
 }
 
