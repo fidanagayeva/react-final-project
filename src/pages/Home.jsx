@@ -4,6 +4,7 @@ import Sponsored from '../components/Sponsored';
 import EditorCards from '../components/EditorCards';
 import VideoCards from '../components/VideoCards'; 
 import NewGadgets from '../components/NewGadgets';
+import Featured from '../components/Featured';
 
 const Home = () => {
   const mainCard = {
@@ -105,6 +106,7 @@ const Home = () => {
         <VideoCards /> 
         <NewGadgets /> 
         <Sponsored />
+        <Featured />
       </div>
   );
 };
