@@ -5,6 +5,7 @@ import EditorCards from '../components/EditorCards';
 import VideoCards from '../components/VideoCards'; 
 import NewGadgets from '../components/NewGadgets';
 import Featured from '../components/Featured';
+import FeaturedCards from '../components/FeaturedCards';
 
 const Home = () => {
   const mainCard = {
@@ -107,6 +108,7 @@ const Home = () => {
         <NewGadgets /> 
         <Sponsored />
         <Featured />
+        <FeaturedCards />
       </div>
   );
 };
