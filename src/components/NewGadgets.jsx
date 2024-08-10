@@ -2,7 +2,7 @@ import React from "react";
 
 const NewGadgets = () => {
   return (
-    <div className="container px-4 flex justify-center items-center mt-[3rem] mb-[11rem]">
+    <div className="container px-4 flex justify-center items-center mt-[3rem]">
       <div className="flex-1 pr-6">
         <div className="space-y-8">
           <div>

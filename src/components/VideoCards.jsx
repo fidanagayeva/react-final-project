@@ -3,7 +3,7 @@ import { FaPlay } from 'react-icons/fa';
 
 const VideoCards = () => {
     return (
-        <div className="bg-[#0A0A23] text-white p-6 w-[98.9vw] ml-[-5vw] overflow-hidden">
+        <div className="bg-[#0A0A23] text-white p-6 w-[98.9vw] ml-[-5vw] overflow-hidden mt-[3rem]">
             <h2 className="text-3xl font-bold mb-6 ml-[3rem]">Trending Videos</h2>
             <div className="flex mb-6 ml-[3rem] mr-[3rem]">
                 <div className="w-[72%] pr-4">

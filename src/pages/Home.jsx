@@ -104,6 +104,7 @@ const Home = () => {
         <EditorCards /> 
         <VideoCards /> 
         <NewGadgets /> 
+        <Sponsored />
       </div>
   );
 };
