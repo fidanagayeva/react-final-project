@@ -3,6 +3,8 @@ import { MainCard, SubCard, ArticleCard } from '../components/Card';
 import Sponsored from '../components/Sponsored';
 import EditorCards from '../components/EditorCards';
 import VideoCards from '../components/VideoCards'; 
+import NewGadgets from '../components/NewGadgets';
+
 const Home = () => {
   const mainCard = {
     id: 1,
@@ -101,6 +103,7 @@ const Home = () => {
         <Sponsored />
         <EditorCards /> 
         <VideoCards /> 
+        <NewGadgets /> 
       </div>
   );
 };
