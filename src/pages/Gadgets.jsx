@@ -1,9 +1,9 @@
 import React from 'react';
-import Layout from '../featured/Layout';
+import GadgetsCards from '../components/GadgetsCards';
 
 const Gadgets = () => {
   return (
-   <h1>salam</h1>
+    <GadgetsCards/>
   );
 }
 
