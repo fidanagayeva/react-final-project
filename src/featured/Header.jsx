@@ -14,7 +14,7 @@ const Header = ({ toggleSidebar, sidebar }) => {
             <Link to="/" className="hover:text-gray-400 transition duration-300">Contact</Link>
             <Link to="/" className="hover:text-gray-400 transition duration-300">Buy Now</Link>
           </div>
-          <div className="flex space-x-4">
+          <div className="hidden sm:flex space-x-4">
             <FaFacebookF className="hover:text-gray-400 cursor-pointer transition duration-300 text-sm" />
             <FaTwitter className="hover:text-gray-400 cursor-pointer transition duration-300 text-sm" />
             <FaInstagram className="hover:text-gray-400 cursor-pointer transition duration-300 text-sm" />
@@ -23,12 +23,12 @@ const Header = ({ toggleSidebar, sidebar }) => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center" style={{ marginTop: '3rem' }}>
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center flex-wrap sm:flex-nowrap" style={{ marginTop: '3rem' }}>
         <div className="flex items-center">
-          <FaBars className="text-lg cursor-pointer mr-4" onClick={toggleSidebar} />
+          <FaBars className="text-lg cursor-pointer mr-4 sm:mr-0" onClick={toggleSidebar} />
           <img src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/1techblog-logo.png" alt="" className="w-30 h-10 mx-2" />
         </div>
-        <nav className="flex space-x-4">
+        <nav className="hidden sm:flex space-x-4">
           <Link to="/" className="font-bold">Home</Link>
           <div className="relative group">
             <Link to="/" className="hover:text-blue-500 transition duration-300 flex items-center font-bold">Features <FaChevronDown className="ml-1 text-blue-500 text-sm" /></Link>
@@ -59,7 +59,7 @@ const Header = ({ toggleSidebar, sidebar }) => {
           <Link to="/" className="font-bold">Buy Theme</Link>
         </nav>
         <div className="flex items-center space-x-4">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-600 font-bold">Subscribe</button>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-600 font-bold hidden sm:block">Subscribe</button>
           <FaMoon className="text-lg cursor-pointer" />
           <FaSearch className="text-lg cursor-pointer" />
           <FaTimes className={`text-lg cursor-pointer ${sidebar ? 'block' : 'hidden'}`} onClick={toggleSidebar} />

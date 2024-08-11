@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between">
-          <div>
+        <div className="flex flex-col lg:flex-row justify-between">
+          <div className="mb-8 lg:mb-0">
             <h2 className="text-lg font-bold">Most Popular</h2>
             <ul>
               <li className="flex items-center my-4 bg-black p-4 rounded-lg">
@@ -42,7 +42,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="mb-8 lg:mb-0">
             <h2 className="text-lg font-bold">Our Picks</h2>
             <ul>
               <li className="flex items-center my-4 bg-black p-4 rounded-lg">
@@ -74,9 +74,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-1/3">
-            <h2 className="text-lg font-bold">Subscribe to Updates</h2>
+          <div className="w-full lg:w-1/3">
             <form className="bg-black border p-8 rounded-lg mt-4">
+            <h2 className="text-lg font-bold flex justify-center">Subscribe to Updates</h2>
               <p className="text-gray-400 mb-6">Get the latest creative news from FooBar about art, design and business.</p>
               <input type="email" placeholder="Your email address.." className="w-full p-4 rounded bg-gray-800 h-[3.1rem] text-white placeholder-gray-500 border border-gray-700 mb-4" />
               <button type="submit" className="w-full bg-blue-700 h-[3.1rem] text-bold text-white p-4 rounded hover:bg-black">SUBSCRIBE</button>

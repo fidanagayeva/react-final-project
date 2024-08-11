@@ -8,7 +8,7 @@ const Sponsored = () => {
         <img
           src="https://smartmag.theme-sphere.com/tech-drop/wp-content/uploads/sites/33/2022/10/Wide-Top.jpg" 
           alt="Sponsored"
-          className="w-full h-auto object-cover pl-[6.5rem] pr-[6.5rem]"
+          className="w-full h-auto object-cover pl-4 pr-4 sm:pl-[6.5rem] sm:pr-[6.5rem]"
         />
       </div>
     </div>

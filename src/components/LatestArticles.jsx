@@ -3,20 +3,20 @@ import { FaFacebookF, FaTwitter, FaPinterestP, FaInstagram, FaTelegramPlane, FaW
 
 const LatestArticles = () => {
     return (
-        <div className="container px-4 flex justify-center items-start mt-[3rem]">
-            <div className="flex-1 pr-6">
+        <div className="container px-4 flex flex-col lg:flex-row justify-center items-start mt-[3rem]">
+            <div className="flex-1 lg:pr-6">
                 <div className="space-y-8">
                     <div className="space-y-4">
-                        <div className="flex justify-between items-center mb-4">
-                            <h2 className="text-2xl font-semibold ml-[0.3rem]">New Gadgets</h2>
-                            <hr className="flex-1 mx-4 border-gray-300" />
+                        <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
+                            <h2 className="text-2xl font-semibold ml-[0.3rem] mb-2 sm:mb-0">Latest Articles</h2>
+                            <hr className="flex-1 mx-4 border-gray-300 hidden sm:block" />
                         </div>
-                        <div className="bg-white rounded-lg shadow flex">
-                            <div className="relative w-1/3 h-[14rem] rounded-l-lg overflow-hidden">
+                        <div className="bg-white rounded-lg shadow flex flex-col sm:flex-row">
+                            <div className="relative w-full sm:w-1/3 h-[12rem] sm:h-[14rem] rounded-t-lg sm:rounded-l-lg sm:rounded-t-none overflow-hidden">
                                 <img
                                     src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/thisisengineering-raeng-a7A9O5htrKs-unsplash-1024x683.jpg"
                                     alt=""
-                                    className="w-full h-full object-cover rounded-lg"
+                                    className="w-full h-full object-cover rounded-t-lg sm:rounded-lg"
                                 />
                                 <div className="absolute bottom-0 left-0 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded">
                                     GAMING
@@ -40,12 +40,12 @@ const LatestArticles = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow flex">
-                            <div className="relative w-1/3 h-[14rem] rounded-l-lg overflow-hidden">
+                        <div className="bg-white rounded-lg shadow flex flex-col sm:flex-row">
+                            <div className="relative w-full sm:w-1/3 h-[12rem] sm:h-[14rem] rounded-t-lg sm:rounded-l-lg sm:rounded-t-none overflow-hidden">
                                 <img
                                     src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_242235046_xl-2015-1-1024x582.jpg"
                                     alt=""
-                                    className="w-full h-full object-cover rounded-lg"
+                                    className="w-full h-full object-cover rounded-t-lg sm:rounded-lg"
                                 />
                                 <div className="absolute bottom-0 left-0 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">
                                     TECHNOLOGY
@@ -69,12 +69,12 @@ const LatestArticles = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow flex">
-                            <div className="relative w-1/3 h-[14rem] rounded-l-lg overflow-hidden">
+                        <div className="bg-white rounded-lg shadow flex flex-col sm:flex-row">
+                            <div className="relative w-full sm:w-1/3 h-[12rem] sm:h-[14rem] rounded-t-lg sm:rounded-l-lg sm:rounded-t-none overflow-hidden">
                                 <img
                                     src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash-1024x683.jpg"
                                     alt=""
-                                    className="w-full h-full object-cover rounded-lg"
+                                    className="w-full h-full object-cover rounded-t-lg sm:rounded-lg"
                                 />
                                 <div className="absolute bottom-0 left-0 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">
                                     TECHNOLOGY
@@ -98,7 +98,7 @@ const LatestArticles = () => {
                             </div>
                         </div>
 
-                        <div className="relative bg-black rounded-lg overflow-hidden h-[28rem]">
+                        <div className="relative bg-black rounded-lg overflow-hidden h-[20rem] sm:h-[28rem]">
                             <img
                                 src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/matias-islas-Nw0j-2YAnfI-unsplash-1-1024x683.jpg"
                                 alt=""
@@ -108,7 +108,7 @@ const LatestArticles = () => {
                                 <div className="bg-pink-600 text-white text-xs font-semibold w-[4rem] px-2 py-1 rounded mb-2">
                                     GAMING
                                 </div>
-                                <h2 className="text-white text-3xl font-bold mb-4">
+                                <h2 className="text-white text-2xl sm:text-3xl font-bold mb-4">
                                     Riot Games Acquires a Wargaming Studio to Help With Live Game Development
                                 </h2>
                                 <div className="flex items-center text-white text-sm">
@@ -122,12 +122,12 @@ const LatestArticles = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow flex">
-                            <div className="relative w-1/3 h-[14rem] rounded-l-lg overflow-hidden">
+                        <div className="bg-white rounded-lg shadow flex flex-col sm:flex-row">
+                            <div className="relative w-full sm:w-1/3 h-[12rem] sm:h-[14rem] rounded-t-lg sm:rounded-l-lg sm:rounded-t-none overflow-hidden">
                                 <img
                                     src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy-gieling-bA5ZJ9JVrb8-unsplash-1-1024x651.jpg"
                                     alt=""
-                                    className="w-full h-full object-cover rounded-lg"
+                                    className="w-full h-full object-cover rounded-t-lg sm:rounded-lg"
                                 />
                                 <div className="absolute bottom-0 left-0 bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded">
                                     GAMING
@@ -151,12 +151,12 @@ const LatestArticles = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow flex">
-                            <div className="relative w-1/3 h-[14rem] rounded-l-lg overflow-hidden">
+                        <div className="bg-white rounded-lg shadow flex flex-col sm:flex-row">
+                            <div className="relative w-full sm:w-1/3 h-[12rem] sm:h-[14rem] rounded-t-lg sm:rounded-l-lg sm:rounded-t-none overflow-hidden">
                                 <img
                                     src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bogdan-glisik-1661469-1-edited-1536x960.jpg"
                                     alt=""
-                                    className="w-full h-full object-cover rounded-lg"
+                                    className="w-full h-full object-cover rounded-t-lg sm:rounded-lg"
                                 />
                                 <div className="absolute bottom-0 left-0 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">
                                     TECHNOLOGY
@@ -180,12 +180,12 @@ const LatestArticles = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow flex">
-                            <div className="relative w-1/3 h-[14rem] rounded-l-lg overflow-hidden">
+                        <div className="bg-white rounded-lg shadow flex flex-col sm:flex-row">
+                            <div className="relative w-full sm:w-1/3 h-[12rem] sm:h-[14rem] rounded-t-lg sm:rounded-l-lg sm:rounded-t-none overflow-hidden">
                                 <img
                                     src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-luis-quintero-1787236-1024x683.jpg"
                                     alt=""
-                                    className="w-full h-full object-cover rounded-lg"
+                                    className="w-full h-full object-cover rounded-t-lg sm:rounded-lg"
                                 />
                                 <div className="absolute bottom-0 left-0 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">
                                     TECHNOLOGY
@@ -209,12 +209,12 @@ const LatestArticles = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow flex">
-                            <div className="relative w-1/3 h-[14rem] rounded-l-lg overflow-hidden">
+                        <div className="bg-white rounded-lg shadow flex flex-col sm:flex-row">
+                            <div className="relative w-full sm:w-1/3 h-[12rem] sm:h-[14rem] rounded-t-lg sm:rounded-l-lg sm:rounded-t-none overflow-hidden">
                                 <img
                                     src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bruno-bueno-3854821-1024x683.jpg"
                                     alt=""
-                                    className="w-full h-full object-cover rounded-lg"
+                                    className="w-full h-full object-cover rounded-t-lg sm:rounded-lg"
                                 />
                                 <div className="absolute bottom-0 left-0 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded">
                                     TECHNOLOGY
@@ -244,45 +244,33 @@ const LatestArticles = () => {
                 </div>
             </div>
 
-            <div className="w-1/4 sticky top-0 h-screen mb-[21.5rem] space-y-6 pr-4">
+            <div className="w-full lg:w-1/4 lg:sticky top-0 lg:h-screen mb-[10rem] lg:mb-[21.5rem] space-y-6 lg:pr-4">
                 <div className="p-4 rounded-lg shadow-md border border-gray-300">
                     <h2 className="text-lg font-semibold mb-4 text-center">We're Social</h2>
-                    <div className="grid grid-cols-2 gap-2">
-                        <div className="flex items-center justify-center border border-gray-300 p-2 rounded-lg">
-                            <div className="flex items-center space-x-2">
-                                <FaFacebookF className="w-6 h-6 text-blue-600" />
-                                <div className="text-sm font-medium">1.1K Facebook</div>
-                            </div>
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="flex items-center justify-center border border-gray-200 p-2 rounded-lg">
+                            <FaFacebookF className="w-6 h-6 text-blue-600" />
+                            <div className="ml-2 text-sm font-medium">1.1K Facebook</div>
                         </div>
-                        <div className="flex items-center justify-center border border-gray-300 p-2 rounded-lg">
-                            <div className="flex items-center space-x-2">
-                                <FaTwitter className="w-6 h-6 text-blue-400" />
-                                <div className="text-sm font-medium">68.9K Twitter</div>
-                            </div>
+                        <div className="flex items-center justify-center border border-gray-200 p-2 rounded-lg">
+                            <FaTwitter className="w-6 h-6 text-blue-400" />
+                            <div className="ml-2 text-sm font-medium">68.9K Twitter</div>
                         </div>
-                        <div className="flex items-center justify-center border border-gray-300 p-2 rounded-lg">
-                            <div className="flex items-center space-x-2">
-                                <FaPinterestP className="w-6 h-6 text-red-600" />
-                                <div className="text-sm font-medium">10.7K Pinterest</div>
-                            </div>
+                        <div className="flex items-center justify-center border border-gray-200 p-2 rounded-lg">
+                            <FaPinterestP className="w-6 h-6 text-red-600" />
+                            <div className="ml-2 text-sm font-medium">10.7K Pinterest</div>
                         </div>
-                        <div className="flex items-center justify-center border border-gray-300 p-2 rounded-lg">
-                            <div className="flex items-center space-x-2">
-                                <FaInstagram className="w-6 h-6 text-pink-600" />
-                                <div className="text-sm font-medium">46.4K Instagram</div>
-                            </div>
+                        <div className="flex items-center justify-center border border-gray-200 p-2 rounded-lg">
+                            <FaInstagram className="w-6 h-6 text-pink-600" />
+                            <div className="ml-2 text-sm font-medium">46.4K Instagram</div>
                         </div>
-                        <div className="flex items-center justify-center border border-gray-300 p-2 rounded-lg">
-                            <div className="flex items-center space-x-2">
-                                <FaTelegramPlane className="w-6 h-6 text-blue-500" />
-                                <div className="text-sm font-medium">Telegram</div>
-                            </div>
+                        <div className="flex items-center justify-center border border-gray-200 p-2 rounded-lg">
+                            <FaTelegramPlane className="w-6 h-6 text-blue-500" />
+                            <div className="ml-2 text-sm font-medium">Telegram</div>
                         </div>
-                        <div className="flex items-center justify-center border border-gray-300 p-2 rounded-lg">
-                            <div className="flex items-center space-x-2">
-                                <FaWhatsapp className="w-6 h-6 text-green-500" />
-                                <div className="text-sm font-medium">WhatsApp</div>
-                            </div>
+                        <div className="flex items-center justify-center border border-gray-200 p-2 rounded-lg">
+                            <FaWhatsapp className="w-6 h-6 text-green-500" />
+                            <div className="ml-2 text-sm font-medium">WhatsApp</div>
                         </div>
                     </div>
                 </div>
@@ -296,7 +284,7 @@ const LatestArticles = () => {
                                 alt=""
                                 className="w-full h-auto rounded-lg object-cover mb-2"
                             />
-                            <div className="absolute bottom-[10.8rem] left-[1rem] bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded">GAMING</div>
+                            <div className="absolute mb-[-1rem] sm:bottom-[10.8rem] left-[1rem] bg-pink-600 text-white text-xs font-semibold px-2 py-1 rounded">GAMING</div>
                             <h3 className="text-sm font-bold">PS5 vs Xbox Series XS vs Switch Launch Sales Comparison</h3>
                             <div className="text-xs text-gray-500 mt-1">
                                 Shane Doe · Sep 8, 2020
