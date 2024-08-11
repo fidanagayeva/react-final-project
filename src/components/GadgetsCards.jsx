@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaFacebookF, FaTwitter, FaPinterestP, FaInstagram, FaTelegramPlane, FaWhatsapp } from 'react-icons/fa';
 
 const GadgetsCards = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -517,70 +518,202 @@ const GadgetsCards = () => {
             </div>
 
 
-            
-            <div className="col-span-1">
-                {/* Right side content */}
-                <div className="bg-white p-4 rounded-lg shadow-md">
-                    <h3 className="text-lg font-bold mb-4">Top Posts</h3>
-                    <div className="space-y-4">
-                        <div className="flex items-center">
-                            <img src="image_url" alt="Post Image" className="w-16 h-16 rounded-md" />
-                            <div className="ml-4">
-                                <h4 className="text-sm font-semibold">Popular New Xbox Game Pass Game Being Review Bombed With “Os”</h4>
-                                <p className="text-xs text-gray-500">Jan 14, 2021 · <span className="text-red-500">7,796 Views</span></p>
-                            </div>
-                        </div>
-                        {/* Repeat similar blocks for other posts */}
-                    </div>
-                </div>
-                <div className="bg-white p-4 mt-6 rounded-lg shadow-md">
-                    <h3 className="text-lg font-bold mb-4">Stay In Touch</h3>
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="flex items-center space-x-2">
-                            <i className="fab fa-facebook text-blue-600"></i>
-                            <span className="text-sm font-semibold">1.1K Facebook</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <i className="fab fa-youtube text-red-600"></i>
-                            <span className="text-sm font-semibold">105K YouTube</span>
-                        </div>
-                        {/* Repeat similar blocks for other social media platforms */}
-                    </div>
-                </div>
-                <div className="bg-white p-4 mt-6 rounded-lg shadow-md">
-                    <h3 className="text-lg font-bold mb-4">Latest Reviews</h3>
-                    <div className="space-y-4">
-                        <div className="flex items-center">
-                            <img src="image_url" alt="Review Image" className="w-16 h-16 rounded-md" />
-                            <div className="ml-4">
-                                <span className="text-xs bg-pink-600 text-white rounded px-2 py-1">GAMING</span>
-                                <h4 className="text-sm font-semibold">Pico 4 Review: Should You Actually Buy One Instead Of Quest 2?</h4>
-                                <p className="text-xs text-gray-500">Shane Doe · Jan 15, 2021</p>
-                            </div>
-                            <div className="ml-auto bg-gray-100 rounded-full px-3 py-1 text-sm text-gray-700">
-                                85%
-                            </div>
-                        </div>
-                        {/* Repeat similar blocks for other reviews */}
-                    </div>
-                </div>
-                <div className="bg-white p-4 mt-6 rounded-lg shadow-md">
-                    <div className="text-center mb-4">
-                        <i className="fas fa-envelope text-blue-600 text-3xl"></i>
-                    </div>
-                    <h3 className="text-lg font-bold text-center">Subscribe to Updates</h3>
-                    <p className="text-sm text-center text-gray-500">Get the latest tech news from FooBar about tech, design, and biz.</p>
-                    <div className="mt-4">
-                        <input type="email" placeholder="Your email address..." className="w-full px-3 py-2 border border-gray-300 rounded mb-2" />
-                        <button className="w-full bg-blue-600 text-white px-3 py-2 rounded">SUBSCRIBE</button>
-                    </div>
-                    <div className="mt-2 text-xs text-gray-500">
-                        <input type="checkbox" className="mr-1" />
-                        By signing up, you agree to the terms and our Privacy Policy agreement.
-                    </div>
-                </div>
 
+            <div className="col-span-1">
+                <div className="p-0">
+                    <div className="relative mb-6">
+                        <img
+                            src="https://smartmag.theme-sphere.com/news-bulletin/wp-content/uploads/sites/26/2021/11/Smart-Woman.jpg"
+                            alt=""
+                            className="w-full h-64 object-cover"
+                        />
+                    </div>
+
+                    <div>
+                        <h3 className="text-lg font-bold mb-4">Top Posts</h3>
+                        <div className="flex items-center mb-4">
+                            <img
+                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/kamil-s-SuPAbuuK7f4-unsplash-768x512.jpg"
+                                alt=""
+                                className="w-20 h-20 object-cover rounded-lg mr-4"
+                            />
+                            <div>
+                                <h4 className="text-md font-semibold">
+                                    Popular New Xbox Game Pass Game Being Review Bombed With “0s”
+                                </h4>
+                                <div className="text-gray-500 text-sm">
+                                    <span>Jan 14, 2021</span> ·
+                                    <span className="text-red-500 ml-2">7,792 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center mb-4">
+                            <img
+                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/jonathan-kemper-poSms2EzfNY-unsplash-768x512.jpg"
+                                alt=""
+                                className="w-20 h-20 object-cover rounded-lg mr-4"
+                            />
+                            <div>
+                                <h4 className="text-md font-semibold">
+                                    Samsung is Developing Bright MicroLED on Displays for AR Headsets
+                                </h4>
+                                <div className="text-gray-500 text-sm">
+                                    <span>Jan 14, 2021</span> ·
+                                    <span className="text-red-500 ml-2">6,914 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center mb-4">
+                            <img
+                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/0247d91565b69ed9ddba4ec59ac97963-1-1024x585.jpg"
+                                alt=""
+                                className="w-20 h-20 object-cover rounded-lg mr-4"
+                            />
+                            <div>
+                                <h4 className="text-md font-semibold">
+                                    Warner Bros. Games Announces Mortal Kombat: Onslaught
+                                </h4>
+                                <div className="text-gray-500 text-sm">
+                                    <span>Jan 14, 2021</span> ·
+                                    <span className="text-red-500 ml-2">4,418 Views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Stay In Touch Section */}
+                        <div className="p-3">
+                            <h2 className="text-lg font-bold mb-4 text-start">Stay In Touch</h2>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="flex items-center justify-center border border-gray-300 p-1">
+                                    <FaFacebookF className="w-6 h-6 text-blue-600" />
+                                    <div className="ml-2 text-sm font-medium">1.1K Facebook</div>
+                                </div>
+                                <div className="flex items-center justify-center border border-gray-300 p-1">
+                                    <FaTwitter className="w-6 h-6 text-blue-400" />
+                                    <div className="ml-2 text-sm font-medium">68.9K Twitter</div>
+                                </div>
+                                <div className="flex items-center justify-center border border-gray-300 p-1">
+                                    <FaPinterestP className="w-6 h-6 text-red-600" />
+                                    <div className="ml-2 text-sm font-medium">10.7K Pinterest</div>
+                                </div>
+                                <div className="flex items-center justify-center border border-gray-300 p-1">
+                                    <FaInstagram className="w-6 h-6 text-pink-600" />
+                                    <div className="ml-2 text-sm font-medium">46.4K Instagram</div>
+                                </div>
+                                <div className="flex items-center justify-center border h-[3rem] border-gray-300 p-1">
+                                    <FaTelegramPlane className="w-6 h-6 text-blue-500" />
+                                    <div className="ml-2 text-sm font-medium">Telegram</div>
+                                </div>
+                                <div className="flex items-center justify-center border border-gray-300 p-1">
+                                    <FaWhatsapp className="w-6 h-6 text-green-500" />
+                                    <div className="ml-2 text-sm font-medium">WhatsApp</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="mt-8">
+                            <h3 className="text-lg font-bold mb-4">Latest Reviews</h3>
+
+                            <div className="p-0 mb-2">
+                                <div className="relative">
+                                    <img
+                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/woman-in-3d-virtual-reality-glasses_t20_WQVvL4-768x513.jpg"
+                                        alt=""
+                                        className="w-full h-40 rounded-lg object-cover"
+                                    />
+                                    <div className="absolute top-0 left-0 bg-pink-600 text-white px-2 py-1 text-xs font-bold rounded">
+                                        GAMING
+                                    </div>
+                                    <div className="absolute top-2 right-2 bg-blue-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
+                                        85%
+                                    </div>
+                                </div>
+                                <h4 className="text-md font-semibold mt-4">
+                                    Pico 4 Review: Should You Actually Buy One Instead Of Quest 2?
+                                </h4>
+                                <div className="text-gray-500 text-sm mt-2">
+                                    Shane Doe · Jan 15, 2021
+                                </div>
+                            </div>
+
+                            <div className="p-0 mb-2">
+                                <div className="relative">
+                                    <img
+                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-leon-3636001-2-768x512.jpg"
+                                        alt=""
+                                        className="w-full h-40 rounded-lg object-cover"
+                                    />
+                                    <div className="absolute top-0 left-0 bg-blue-600 text-white px-2 py-1 text-xs font-bold rounded">
+                                        TECHNOLOGY
+                                    </div>
+                                    <div className="absolute top-2 right-2 bg-blue-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
+                                        8.1
+                                    </div>
+                                </div>
+                                <h4 className="text-md font-semibold mt-4">
+                                    A Review of the Venus Optics Argus 18mm f/0.95 MFT APO Lens
+                                </h4>
+                                <div className="text-gray-500 text-sm mt-2">
+                                    Shane Doe · Jan 15, 2021
+                                </div>
+                            </div>
+
+                            <div className="p-0 mb-2">
+                                <div className="relative">
+                                    <img
+                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/surya-devarakonda-lnEM5jOu-mc-unsplash-768x512.jpg"
+                                        alt=""
+                                        className="w-full h-40 rounded-lg object-cover"
+                                    />
+                                    <div className="absolute top-0 left-0 bg-purple-600 text-white px-2 py-1 text-xs font-bold rounded">
+                                        GADGETS
+                                    </div>
+                                    <div className="absolute top-2 right-2 bg-blue-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
+                                        8.9
+                                    </div>
+                                </div>
+                                <h4 className="text-md font-semibold mt-4">
+                                    DJI Avata Review: Immersive FPV Flying For Drone Enthusiasts
+                                </h4>
+                                <div className="text-gray-500 text-sm mt-2">
+                                    Shane Doe · Jan 15, 2021
+                                </div>
+                            </div>
+
+                            <div className="mt-8 text-center pr-6">
+                                <div className="border p-6 rounded-lg h-full lg:h-[21rem] w-full lg:w-[15rem]">
+                                    <h3 className="text-black text-xl font-bold w-full text-center whitespace-nowrap">
+                                        Subscribe to Updates
+                                    </h3>
+                                    <p className="text-gray-400 mt-2">Get the latest creative news from FooBar about art, design, and business.</p>
+                                    <form className="mt-4">
+                                        <input type="email" placeholder="Your email address.." className="w-full p-3 rounded bg-white text-white placeholder-gray-500 border border-gray-700" />
+                                        <button type="submit" className="w-full bg-blue-700 text-bold text-white p-3 mt-2 rounded">Subscribe</button>
+                                        <div className="flex items-center mt-2 justify-center">
+                                            <input type="checkbox" className="mr-2" />
+                                            <p className="text-gray-400 text-sm">By signing up, you agree to our terms and our <a href="/" className="text-white underline">Privacy Policy</a> agreement.</p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div className="relative mt-6">
+                                <img
+                                    src="https://smartmag.theme-sphere.com/tech-1/wp-content/uploads/sites/7/2021/01/300x600-banner-tech-02.jpg"
+                                    alt=""
+                                    className="w-[15rem] ull h-[30rem] object-cover"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
+
         </div>
     );
 };
