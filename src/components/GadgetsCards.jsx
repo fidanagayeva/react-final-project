@@ -3,9 +3,19 @@ import { FaFacebookF, FaTwitter, FaPinterestP, FaInstagram, FaTelegramPlane, FaW
 
 const GadgetsCards = () => {
     const [currentPage, setCurrentPage] = useState(1);
+    const [isLoading, setIsLoading] = useState(true);
+
+    React.useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+        return () => clearTimeout(timer);
+    }, []);
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
+        setIsLoading(true);
+        setTimeout(() => setIsLoading(false), 1500); 
     };
 
     return (
@@ -14,285 +24,277 @@ const GadgetsCards = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
                     {currentPage === 1 && (
                         <>
-                            <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
-                                <div className="relative">
-                                    <img
-                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/surya-devarakonda-lnEM5jOu-mc-unsplash-1024x683.jpg"
-                                        alt=""
-                                        className="w-full h-56 object-cover rounded-lg"
-                                    />
-                                    <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
-                                        8.7
+                            {isLoading ? (
+                                <>
+                                    {[...Array(8)].map((_, index) => (
+                                        <div key={index} className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96 bg-gray-300 animate-pulse h-64"></div>
+                                    ))}
+                                </>
+                            ) : (
+                                <>
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
+                                        <div className="relative">
+                                            <img
+                                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/surya-devarakonda-lnEM5jOu-mc-unsplash-1024x683.jpg"
+                                                alt=""
+                                                className="w-full h-56 object-cover rounded-lg"
+                                            />
+                                            <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
+                                                8.7
+                                            </div>
+                                            <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                                GADGETS
+                                            </div>
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
+                                                DJI Avata Review: Immersive FPV Flying For Drone Enthusiasts
+                                            </h3>
+                                            <div className="mt-2 text-xs flex items-center">
+                                                <span className='text-black'>Shane Doe &bull; </span>
+                                                <span className='text-gray-500'>Jan 15, 2021</span>
+                                            </div>
+                                            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                                                To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
-                                        GADGETS
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
-                                        DJI Avata Review: Immersive FPV Flying For Drone Enthusiasts
-                                    </h3>
-                                    <div className="mt-2 text-xs flex items-center">
-                                        <span className='text-black'>Shane Doe &bull; </span>
-                                        <span className='text-gray-500'>Jan 15, 2021</span>
-                                    </div>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                                        To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
-                                <div className="relative">
-                                    <img
-                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/omid-armin-gSZCLsE7ysc-unsplash-1024x683.jpg"
-                                        alt=""
-                                        className="w-full h-56 object-cover rounded-lg"
-                                    />
-                                    <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
-                                        8.7
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
+                                        <div className="relative">
+                                            <img
+                                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/omid-armin-gSZCLsE7ysc-unsplash-1024x683.jpg"
+                                                alt=""
+                                                className="w-full h-56 object-cover rounded-lg"
+                                            />
+                                            <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
+                                                8.7
+                                            </div>
+                                            <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                                GADGETS
+                                            </div>
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
+                                                DJI Avata Review: Immersive FPV Flying For Drone Enthusiasts
+                                            </h3>
+                                            <div className="mt-2 text-xs flex items-center">
+                                                <span className='text-black'>Shane Doe &bull; </span>
+                                                <span className='text-gray-500'>Jan 15, 2021</span>
+                                            </div>
+                                            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                                                To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
-                                        GADGETS
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
-                                        DJI Avata Review: Immersive FPV Flying For Drone Enthusiasts
-                                    </h3>
-                                    <div className="mt-2 text-xs flex items-center">
-                                        <span className='text-black'>Shane Doe &bull; </span>
-                                        <span className='text-gray-500'>Jan 15, 2021</span>
-                                    </div>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                                        To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
-                                <div className="relative">
-                                    <img
-                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/muhammad-faiz-zulkeflee-p-yGtLN-GKA-unsplash-1-1024x1024.jpg"
-                                        alt=""
-                                        className="w-full h-56 object-cover rounded-lg"
-                                    />
-                                    <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
-                                        8.7
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
+                                        <div className="relative">
+                                            <img
+                                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/muhammad-faiz-zulkeflee-p-yGtLN-GKA-unsplash-1-1024x1024.jpg"
+                                                alt=""
+                                                className="w-full h-56 object-cover rounded-lg"
+                                            />
+                                            <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                                GADGETS
+                                            </div>
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
+                                                Thousands Of PC Games Discounted In New Black Friday Sale
+                                            </h3>
+                                            <div className="mt-2 text-xs flex items-center">
+                                                <span className='text-black'>Shane Doe &bull; </span>
+                                                <span className='text-gray-500'>Jan 15, 2021</span>
+                                            </div>
+                                            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                                                To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
-                                        GADGETS
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
-                                        Thousands Of PC Games Discounted In New Black Friday Sale
-                                    </h3>
-                                    <div className="mt-2 text-xs flex items-center">
-                                        <span className='text-black'>Shane Doe &bull; </span>
-                                        <span className='text-gray-500'>Jan 15, 2021</span>
-                                    </div>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                                        To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
-                                <div className="relative">
-                                    <img
-                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/blaz-erzetic-ChSgE4K1iGY-unsplash-1024x683.jpg"
-                                        alt=""
-                                        className="w-full h-56 object-cover rounded-lg"
-                                    />
-                                    <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
-                                        8.7
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
+                                        <div className="relative">
+                                            <img
+                                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/blaz-erzetic-ChSgE4K1iGY-unsplash-1024x683.jpg"
+                                                alt=""
+                                                className="w-full h-56 object-cover rounded-lg"
+                                            />
+                                            <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                                GADGETS
+                                            </div>
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
+                                                Could Solar-Powered Headphones Be The Next Must-Have?
+                                            </h3>
+                                            <div className="mt-2 text-xs flex items-center">
+                                                <span className='text-black'>Shane Doe &bull; </span>
+                                                <span className='text-gray-500'>Jan 15, 2021</span>
+                                            </div>
+                                            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                                                To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
-                                        GADGETS
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
-                                        Could Solar-Powered Headphones Be The Next Must-Have?
-                                    </h3>
-                                    <div className="mt-2 text-xs flex items-center">
-                                        <span className='text-black'>Shane Doe &bull; </span>
-                                        <span className='text-gray-500'>Jan 15, 2021</span>
-                                    </div>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                                        To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
-                                <div className="relative">
-                                    <img
-                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/pexels-dids-3657268-1024x683.jpg"
-                                        alt=""
-                                        className="w-full h-56 object-cover rounded-lg"
-                                    />
-                                    <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
-                                        8.7
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
+                                        <div className="relative">
+                                            <img
+                                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2021/01/pexels-dids-3657268-1024x683.jpg"
+                                                alt=""
+                                                className="w-full h-56 object-cover rounded-lg"
+                                            />
+                                            <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                                GADGETS
+                                            </div>
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
+                                                Take Your Photography to The Next Level with This Drone
+                                            </h3>
+                                            <div className="mt-2 text-xs flex items-center">
+                                                <span className='text-black'>Shane Doe &bull; </span>
+                                                <span className='text-gray-500'>Jan 15, 2021</span>
+                                            </div>
+                                            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                                                To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
-                                        GADGETS
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
-                                        Take Your Photography to The Next Level with This Drone
-                                    </h3>
-                                    <div className="mt-2 text-xs flex items-center">
-                                        <span className='text-black'>Shane Doe &bull; </span>
-                                        <span className='text-gray-500'>Jan 15, 2021</span>
-                                    </div>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                                        To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
-                                <div className="relative">
-                                    <img
-                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_286775054_xl-2015-1-1024x445.jpg"
-                                        alt=""
-                                        className="w-full h-56 object-cover rounded-lg"
-                                    />
-                                    <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
-                                        8.7
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
+                                        <div className="relative">
+                                            <img
+                                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_286775054_xl-2015-1-1024x445.jpg"
+                                                alt=""
+                                                className="w-full h-56 object-cover rounded-lg"
+                                            />
+                                            <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                                GADGETS
+                                            </div>
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
+                                                Oculus Founder Makes a VR Headset That Can Literally Kill You
+                                            </h3>
+                                            <div className="mt-2 text-xs flex items-center">
+                                                <span className='text-black'>Shane Doe &bull; </span>
+                                                <span className='text-gray-500'>Jan 15, 2021</span>
+                                            </div>
+                                            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                                                To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
-                                        GADGETS
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
-                                        Oculus Founder Makes a VR Headset That Can Literally Kill You
-                                    </h3>
-                                    <div className="mt-2 text-xs flex items-center">
-                                        <span className='text-black'>Shane Doe &bull; </span>
-                                        <span className='text-gray-500'>Jan 15, 2021</span>
-                                    </div>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                                        To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
-                                <div className="relative">
-                                    <img
-                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_422797426_xl-2015-1-1024x681.jpg"
-                                        alt=""
-                                        className="w-full h-56 object-cover rounded-lg"
-                                    />
-                                    <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
-                                        8.7
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
+                                        <div className="relative">
+                                            <img
+                                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_422797426_xl-2015-1-1024x681.jpg"
+                                                alt=""
+                                                className="w-full h-56 object-cover rounded-lg"
+                                            />
+                                            <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
+                                                8.7
+                                            </div>
+                                            <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                                GADGETS
+                                            </div>
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
+                                                Braun Series 7 Electric Shaver Review: Quality at a Good Price
+                                            </h3>
+                                            <div className="mt-2 text-xs flex items-center">
+                                                <span className='text-black'>Shane Doe &bull; </span>
+                                                <span className='text-gray-500'>Jan 15, 2021</span>
+                                            </div>
+                                            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                                                To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
-                                        GADGETS
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
-                                        Braun Series 7 Electric Shaver Review: Quality at a Good Price
-                                    </h3>
-                                    <div className="mt-2 text-xs flex items-center">
-                                        <span className='text-black'>Shane Doe &bull; </span>
-                                        <span className='text-gray-500'>Jan 15, 2021</span>
-                                    </div>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                                        To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
-                                <div className="relative">
-                                    <img
-                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_443469058_xl-2015-1-1024x693.jpg"
-                                        alt=""
-                                        className="w-full h-56 object-cover rounded-lg"
-                                    />
-                                    <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
-                                        8.7
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
+                                        <div className="relative">
+                                            <img
+                                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_443469058_xl-2015-1-1024x693.jpg"
+                                                alt=""
+                                                className="w-full h-56 object-cover rounded-lg"
+                                            />
+                                            <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
+                                                8.7
+                                            </div>
+                                            <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                                GADGETS
+                                            </div>
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
+                                                Google Pixel 7, iPhone 14 Compared: Check Out 5 Major Differences
+                                            </h3>
+                                            <div className="mt-2 text-xs flex items-center">
+                                                <span className='text-black'>Shane Doe &bull; </span>
+                                                <span className='text-gray-500'>Jan 15, 2021</span>
+                                            </div>
+                                            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                                                To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
-                                        GADGETS
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
-                                        Google Pixel 7, iPhone 14 Compared: Check Out 5 Major Differences
-                                    </h3>
-                                    <div className="mt-2 text-xs flex items-center">
-                                        <span className='text-black'>Shane Doe &bull; </span>
-                                        <span className='text-gray-500'>Jan 15, 2021</span>
-                                    </div>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                                        To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
-                                <div className="relative">
-                                    <img
-                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/laurens-derks-h0tMHMyfr9A-unsplash-1024x678.jpg"
-                                        alt=""
-                                        className="w-full h-56 object-cover rounded-lg"
-                                    />
-                                    <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
-                                        8.7
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
+                                        <div className="relative">
+                                            <img
+                                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/laurens-derks-h0tMHMyfr9A-unsplash-768x509.jpg"
+                                                alt=""
+                                                className="w-full h-56 object-cover rounded-lg"
+                                            />
+                                            <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                                GADGETS
+                                            </div>
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
+                                            Why Apple Should Skip The MacBook Pro Launch
+                                            </h3>
+                                            <div className="mt-2 text-xs flex items-center">
+                                                <span className='text-black'>Shane Doe &bull; </span>
+                                                <span className='text-gray-500'>Jan 15, 2021</span>
+                                            </div>
+                                            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                                                To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
-                                        GADGETS
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
-                                        Why Apple Should Skip The MacBook Pro Launch
-                                    </h3>
-                                    <div className="mt-2 text-xs flex items-center">
-                                        <span className='text-black'>Shane Doe &bull; </span>
-                                        <span className='text-gray-500'>Jan 15, 2021</span>
-                                    </div>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                                        To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
-                                <div className="relative">
-                                    <img
-                                        src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_430988634_xl-2015-4-1024x711.jpg"
-                                        alt=""
-                                        className="w-full h-56 object-cover rounded-lg"
-                                    />
-                                    <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs w-[2.3rem] h-[2.3rem] font-bold flex items-center justify-center rounded-full">
-                                        8.7
+                                    <div className="relative rounded-lg shadow-lg overflow-hidden w-full sm:w-80 md:w-96">
+                                        <div className="relative">
+                                            <img
+                                                src="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_430988634_xl-2015-4-768x533.jpg"
+                                                alt=""
+                                                className="w-full h-56 object-cover rounded-lg"
+                                            />
+                                            <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                                GADGETS
+                                            </div>
+                                        </div>
+                                        <div className="p-4">
+                                            <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
+                                            Apollo G2J Showcases Electric Sports Car
+                                            </h3>
+                                            <div className="mt-2 text-xs flex items-center">
+                                                <span className='text-black'>Shane Doe &bull; </span>
+                                                <span className='text-gray-500'>Jan 15, 2021</span>
+                                            </div>
+                                            <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                                                To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="absolute top-0 left-0 bg-purple-700 text-white text-xs font-semibold px-2 py-1 rounded-md">
-                                        GADGETS
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="mt-2 text-sm sm:text-base font-bold leading-tight">
-                                        Apollo G2J Showcases Electric Sports Car
-                                    </h3>
-                                    <div className="mt-2 text-xs flex items-center">
-                                        <span className='text-black'>Shane Doe &bull; </span>
-                                        <span className='text-gray-500'>Jan 15, 2021</span>
-                                    </div>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                                        To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and...
-                                    </p>
-                                </div>
-                            </div>
+                                </>
+                            )}
                         </>
                     )}
 
@@ -517,8 +519,6 @@ const GadgetsCards = () => {
                 </div>
             </div>
 
-
-
             <div className="col-span-1">
                 <div className="p-0">
                     <div className="relative mb-6">
@@ -582,7 +582,6 @@ const GadgetsCards = () => {
                             </div>
                         </div>
 
-                        {/* Stay In Touch Section */}
                         <div className="p-3">
                             <h2 className="text-lg font-bold mb-4 text-start">Stay In Touch</h2>
                             <div className="grid grid-cols-2 gap-4">
@@ -711,9 +710,6 @@ const GadgetsCards = () => {
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     );
 };
