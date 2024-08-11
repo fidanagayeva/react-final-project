@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaEye, FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
+import { FaEye, FaEdit, FaTrash, FaPlus, FaSpinner } from 'react-icons/fa'; 
 import Modal from './Modal';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,6 +9,7 @@ const EditorCards = () => {
   const [cards, setCards] = useState([]);
   const [selectedCard, setSelectedCard] = useState(null);
   const [modalType, setModalType] = useState('');
+  const [loading, setLoading] = useState(false); 
 
   useEffect(() => {
     const fetchDefaultCards = async () => {
@@ -49,8 +50,12 @@ const EditorCards = () => {
   };
 
   const handleCreate = () => {
-    setSelectedCard(null);
-    setModalType('create');
+    setLoading(true); 
+    setTimeout(() => {
+      setSelectedCard(null);
+      setModalType('create');
+      setLoading(false); 
+    }, 500); 
   };
 
   const handleEdit = (card) => {
@@ -97,8 +102,17 @@ const EditorCards = () => {
       <ToastContainer />
       <div className="text-center mb-8 flex justify-between items-center">
         <h2 className="text-2xl font-bold">Editor's Picks</h2>
-        <button onClick={handleCreate} className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded flex items-center">
-          <FaPlus className="mr-2" /> Create
+        <button
+          onClick={handleCreate}
+          className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded flex items-center"
+          disabled={loading} 
+        >
+          {loading ? (
+            <FaSpinner className="animate-spin mr-2" /> 
+          ) : (
+            <FaPlus className="mr-2" /> 
+          )}
+          {loading ? 'Creating...' : 'Create'} 
         </button>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
