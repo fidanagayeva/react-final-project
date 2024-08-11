@@ -59,7 +59,7 @@ const Header = ({ toggleSidebar, sidebar }) => {
           <Link to="/" className="font-bold">Buy Theme</Link>
         </nav>
         <div className="flex items-center space-x-4">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-600 font-bold hidden sm:block">Subscribe</button>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded transition duration-300 hover:bg-black font-bold hidden sm:block">Subscribe</button>
           <FaMoon className="text-lg cursor-pointer" />
           <FaSearch className="text-lg cursor-pointer" />
           <FaTimes className={`text-lg cursor-pointer ${sidebar ? 'block' : 'hidden'}`} onClick={toggleSidebar} />
