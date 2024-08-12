@@ -16,9 +16,7 @@ const EditorCards = () => {
       try {
         const response = await fetch('http://localhost:8000/editcards'); 
         const data = await response.json();
-        const savedCards = JSON.parse(localStorage.getItem('editorCards')) || [];
-        const mergedCards = mergeCards(savedCards, data); 
-        setCards(mergedCards);
+        setCards(data); 
       } catch (error) {
         console.error('Error fetching default cards:', error);
       }
@@ -26,23 +24,6 @@ const EditorCards = () => {
 
     fetchDefaultCards();
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('editorCards', JSON.stringify(cards));
-  }, [cards]);
-
-  const mergeCards = (saved, defaults) => {
-    const merged = [...defaults];
-    saved.forEach(card => {
-      const index = merged.findIndex(defaultCard => defaultCard.id === card.id);
-      if (index !== -1) {
-        merged[index] = card;
-      } else {
-        merged.push(card);
-      }
-    });
-    return merged;
-  };
 
   const handleView = (card) => {
     setSelectedCard(card);
@@ -81,20 +62,17 @@ const EditorCards = () => {
 
     const updatedCards = [...cards, newCard];
     setCards(updatedCards);
-    localStorage.setItem('editorCards', JSON.stringify(updatedCards));
     toast.success('Card created successfully!');
   };
 
   const handleUpdate = (updatedCard) => {
     const updatedCards = cards.map(card => card.id === updatedCard.id ? updatedCard : card);
     setCards(updatedCards);
-    localStorage.setItem('editorCards', JSON.stringify(updatedCards));
   };
 
   const handleDeleteConfirm = (deletedCard) => {
     const updatedCards = cards.filter(card => card.id !== deletedCard.id);
     setCards(updatedCards);
-    localStorage.setItem('editorCards', JSON.stringify(updatedCards));
   };
 
   return (
